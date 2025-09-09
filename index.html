@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <div class="logo">Nimsara Navodya</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <div class="logo">Nimsara Navodya</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Nimsara Navodya</div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" oncilck="toggleMenu()"></div>
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()" >Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()" >About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()" >Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()" >Contact</a></li> 
+            </div>
         </div>
-        <div class="menu-lnks">
-            <li><a href="#about"oncilck="toggleMenu()">About</a></li>
-            <li><a href="#experience"oncilck="toggleMenu()">Experience</a></li>
-            <li><a href="#project"oncilck="toggleMenu()">Project</a></li>
-            <li><a href="#contact"oncilck="toggleMenu()">Contact</a></li>
+    </nav> 
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Nimsara Navodya profile picture">
         </div>
-    </nav>
-</body>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm</p>
+            <h1 class="title">Nimsara Navodya</h1>
+            <p class="section__text__p2">Frontend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color2" onclick="window.open('/*add CV location here*/')">Download CV</button>
+                <button class="btn btn-color1" onclick="location.href='.#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My linkedin Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/nimsnavodya/'">
+                <img src="./assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https://github.com/nimsnavodya'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="profile picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>aaaa aaaaa <br/> aaaaaa aaaaa aaaaaaaaaaa</p>
+                    </div>
+                    <div class="detais-container">
+                        <img src="./assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>aaaa aaaaa <br/> aaaaaa aaaaa aaaaaaaaaaa</p>
+                    </div>
+                </div> 
+                <div class="text-container">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Tempore labore dicta corrupti nostrum asperiores laboriosam nulla odit id eum enim! Totam, et dolorem, quibusdam, 
+                        iusto voluptates est cum tenetur dolore odio molestiae minima commodi alias consequuntur esse
+                        officiis similique! Doloremque corporis voluptas eaque voluptatem quod. Perspiciatis adipisci provident quasi eaque!</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+
+      <script src="script.js"></script>
+  </body>
 </html>
